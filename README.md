@@ -12,5 +12,6 @@ $ ./a.out
 
 **Major labs/programs**:
 
-1. **Huffman Decoder** (decode.c): decodes a message compressed via the Huffman algorithm.
-2. **Huffman Encoder** (encode.c): encodes and compresses a message via the Huffman algorithm.
+1. **Forest Fire** (forest.c): simulates a forest fire in parallel.
+2. **Huffman Decoder** (decode.c): decodes a message compressed via the Huffman algorithm.
+3. **Huffman Encoder** (encode.c): encodes and compresses a message via the Huffman algorithm.
