@@ -11,12 +11,12 @@ int main() {
 	int n = 0;
 	int huffman = 0;
 	int ascii = 0;
-	char input[10000];
-	char tree[10000];
+	char input[1000000];
+	char tree[1000000];
 	int frequency[256] = {0};
 
 	//fill arrays
-	for(int i=0; i<10000; i++) {
+	for(int i=0; i<1000000; i++) {
 		input[i] = '*';
 		tree[i] = '*';
 	}
@@ -32,7 +32,7 @@ int main() {
 
 	//create tree
 	n = 0;
-	for(int i=0; i<28; i++) {
+	for(int i=0; i<62; i++) {
 		int position = 1;
 		char code = input[n];
 		n++;

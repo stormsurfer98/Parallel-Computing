@@ -6,7 +6,7 @@
 #include <math.h>
 #include <string.h>
 
-int keys[256][16];
+int keys[256][50];
 int items[256] = {0};
 
 typedef struct Node {
@@ -16,7 +16,7 @@ typedef struct Node {
 	struct Node* right;
 } TreeNode;
 
-void traverse(TreeNode* t, int key[16], int depth) {
+void traverse(TreeNode* t, int key[50], int depth) {
 	if((*t).symbol != -1) {
 		items[(*t).symbol] = 1;
 		for(int i=0; i<depth; i++) {
@@ -39,17 +39,17 @@ int main() {
 	FILE* fin = fopen("phrase.txt" , "r");
 	char ch;
 	int n = 0;
-	char input[10000];
+	char input[1000000];
 	int frequency[256] = {0};
 	TreeNode* nodes[256];
 	int count = 0;
 
 	//fill arrays
-	for(int i=0; i<10000; i++) {
+	for(int i=0; i<1000000; i++) {
 		input[i] = '*';
 	}
 	for(int i=0; i<256; i++) {
-		for(int j=0; j<16; j++) {
+		for(int j=0; j<50; j++) {
 			keys[i][j] = -1;
 		}
 	}
@@ -125,20 +125,20 @@ int main() {
 	}
 
 	//print encoded message
-	int temp[16] = {0};
+	int temp[50] = {0};
 	traverse(nodes[0], temp, 0);
 	for(int i=0; i<256; i++) {
 		if(items[i] != 0) {
 			printf("%c", (char)i);
-			for(int j=0; j<16; j++) {
+			for(int j=0; j<50; j++) {
 				if(keys[i][j] != -1) printf("%d", keys[i][j]);
 			}
 			printf("\n");
 		}
 	}
-	for(int i=0; i<10000; i++) {
+	for(int i=0; i<1000000; i++) {
 		if(input[i] != '*') {
-			for(int j=0; j<16; j++) {
+			for(int j=0; j<50; j++) {
 				if(keys[input[i]][j] != -1) printf("%d", keys[input[i]][j]);
 			}
 		}
