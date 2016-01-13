@@ -15,4 +15,4 @@ $ ./a.out
 1. **Forest Fire** (forest.c): simulates a forest fire in parallel.
 2. **Huffman Decoder** (decode.c): decodes a message compressed via the Huffman algorithm.
 3. **Huffman Encoder** (encode.c): encodes and compresses a message via the Huffman algorithm.
-3. **Mandelbrot** (mandelbrot.c): renders the Mandelbrot set (OpenGL) in parallel with fractal zoom and sharpening features.
+4. **Mandelbrot** (mandelbrot.c): renders the Mandelbrot set (OpenGL) in parallel with fractal zoom and sharpening features.
